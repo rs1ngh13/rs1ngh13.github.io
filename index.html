@@ -1,24 +1,150 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajdeep Singh | Data Science Consultant</title>
+  <meta name="description" content="Rajdeep Singh is a Data Science Consultant at Forvis Mazars building quantitative models, data infrastructure, and financial reporting for executive decisions.">
+  <meta property="og:title" content="Rajdeep Singh | Data Science Consultant">
+  <meta property="og:description" content="Quantitative modeling, data engineering, and financial analytics at Forvis Mazars.">
+  <meta property="og:url" content="https://rs1ngh13.github.io/">
+  <meta property="og:image" content="https://rs1ngh13.github.io/assets/images/profile.png">
+  <meta name="theme-color" content="#16243a">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
+  <header class="hero">
+    <div class="hero-text">
+      <img class="avatar" src="assets/images/profile.webp" width="88" height="88" alt="Portrait of Rajdeep Singh">
+      <h1>Rajdeep Singh</h1>
+      <p class="role">Data Science Consultant, Forvis Mazars</p>
+      <p class="lede">I build the models and data infrastructure that finance leaders decide with: Monte Carlo policy simulations, data warehouse rebuilds, and executive reporting on EBITDA, SG&amp;A, and ROIC.</p>
+      <nav class="actions" aria-label="Contact and profiles">
+        <a class="btn primary" href="assets/resume.pdf">Download resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/rajdeepsingh13" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/rs1ngh13" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:rajdeepsingh9613@gmail.com">Email</a>
+      </nav>
+    </div>
+    <figure class="hero-chart">
+      <canvas id="fan" aria-hidden="true"></canvas>
+      <figcaption>A Monte Carlo fan: 400 simulated paths with the median and 10th–90th percentile band, drawn fresh on each visit.</figcaption>
+    </figure>
+  </header>
 
-{% include career-profile.html %}
+  <main id="main">
+    <section class="block" aria-labelledby="exp">
+      <h2 id="exp">Experience</h2>
+      <div class="content">
+        <ol class="timeline">
+          <li>
+            <div class="when">Nov 2025 – present</div>
+            <h3>Data Science Consultant</h3>
+            <p class="org">Forvis Mazars, Analytics &amp; Applied Intelligence Practice, Data Services (remote)</p>
+            <ul>
+              <li>Designed a modular 10-year Monte Carlo simulation in Python, sampling 1,000 scenarios per year of cohort-level attrition and PTO behavior to compare two policies. Stress-tested edge cases and identified <strong>$5M in savings</strong> that drove the client's decision.</li>
+              <li>Lead technical contributor on a client data warehouse rebuild on ADLS: ADF pipelines, SQL views, and dim/fact tables processing hundreds of thousands of daily messages and supporting <strong>~$150M in financial decisions</strong>.</li>
+              <li>Consolidated company-wide reporting from two platforms onto one, ending report-load crashes, and stood up the client's Microsoft Purview instance for cataloging, lineage, monitoring, and governance.</li>
+              <li>Own a forensic investigation of <strong>~56K cryptocurrency transactions</strong>, tracing wallet activity and reconstructing multi-exchange flows in Python to deliver an audit-ready dataset for FIFO-based tax reporting.</li>
+              <li>Architected ETL from NetSuite and SQL/NoSQL sources into Azure, then built Power BI dashboards tracking EBITDA, SG&amp;A, and ROIC that the CEO and CFO use to evaluate performance and acquisitions.</li>
+              <li>Primary technical contact across <strong>3 concurrent engagements</strong>, presenting directly to CFOs, CEOs, and technical teams.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="when">Sep 2024 – Dec 2024</div>
+            <h3>Data Science Intern</h3>
+            <p class="org">Office of Senator Ed Markey, Boston, MA</p>
+            <ul>
+              <li>Led a 4-person team analyzing <strong>481 earmark requests totaling $967M</strong> across 8 congressional subcommittees in Python and Looker Studio.</li>
+              <li>Merged CDS and census data to show that wealthy tracts (3.9% of the total) received 30% of funding, versus 21.5% for low-income tracts.</li>
+              <li>Found that applications recorded only headquarters locations, not where funds were spent. The finding informed a form redesign covering <strong>$80M in annual allocations</strong>.</li>
+              <li>Served as team lead and client liaison, delivering biweekly policy briefings to congressional aides.</li>
+            </ul>
+          </li>
+          <li class="earlier">
+            <div class="when">2023 – 2024</div>
+            <h3>Research roles, Boston University</h3>
+            <p class="org">Computational Neuroscience and Vision Lab (Research Assistant) and Kolachalama Lab, BU School of Medicine (Research Intern)</p>
+            <p>Modeled neural signal transmission in multiple sclerosis, co-authored a review on schizophrenia and visual perception, and used MRI with computer vision in PyTorch to study Alzheimer's-related brain regions.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+    <section class="block" aria-labelledby="proj">
+      <h2 id="proj">Projects</h2>
+      <div class="content projects">
+        <article>
+          <h3>Stock price prediction with sentiment, on Azure</h3>
+          <p>Event-driven pipeline on Data Factory, Databricks, Synapse, and ADLS processing 10K+ real-time price records and sentiment scores with Bronze/Silver/Gold lineage. Regression models in AzureML on OHLC plus sentiment reached about 70–75% directional accuracy; results surfaced in Power BI.</p>
+          <p class="tags">Azure, Databricks, AzureML, Power BI</p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/rs1ngh13/Credit-Card-Fraud-Detection-Pipeline" rel="noopener">Credit card fraud detection pipeline</a></h3>
+          <p>Streaming transactions through Azure Event Hubs, Databricks, and Synapse with z-score anomaly detection and location- and merchant-specific risk scoring. Flagged activity is tracked in a <a href="https://us-east-1.online.tableau.com/#/site/rajdeepsingh9613-60cc67e78b/views/CreditCardFraudDetectionProject/CreditCardFraudDetectionDashboard?:iid=1" rel="noopener">Tableau dashboard</a>.</p>
+          <p class="tags">Event Hubs, Databricks, Synapse, Tableau</p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/BU-Spark/ds-sen-markey-earmarks/tree/main/fa24-team-a" rel="noopener">Equity in congressionally directed spending</a></h3>
+          <p>The analysis behind the Senate office work above: reproducible Python pipelines and an interactive <a href="https://lookerstudio.google.com/u/0/reporting/881a80ac-d734-40fe-9650-fb353ba7b146/page/p_ik3fogfpgd" rel="noopener">Looker Studio dashboard</a> mapping funding gaps by race, income, and geography.</p>
+          <p class="tags">Python, Census data, Looker Studio</p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/John3019/DS542-CNN-A" rel="noopener">Alzheimer's detection with 3D MRI and CNNs</a></h3>
+          <p>Custom 3D CNN in PyTorch classifying CN, MCI, and AD at 93.27% validation accuracy, outperforming 2D architectures, with a preprocessing pipeline that isolates the hippocampus and amygdala.</p>
+          <p class="tags">PyTorch, Computer vision, W&amp;B</p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/rs1ngh13/Atari-Generalized-RL" rel="noopener">Multi-task reinforcement learning on Atari</a></h3>
+          <p>DQN, PPO, and A2C agents across Pong, Breakout, and Beamrider, a multi-head DQN with a shared trunk, and zero-shot tests on Space Invaders and River Raid.</p>
+          <p class="tags">Reinforcement learning, PyTorch</p>
+        </article>
+      </div>
+    </section>
 
-{% include experiences.html %}
+    <section class="block" aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <div class="content">
+        <dl class="skills">
+          <div><dt>Programming and ML</dt><dd>Python (PyTorch, TensorFlow, NumPy, pandas, PySpark, scikit-learn), R, SQL, MATLAB; supervised learning, CNNs, transfer learning, time series forecasting</dd></div>
+          <div><dt>Quantitative methods</dt><dd>Monte Carlo simulation, hypothesis testing, regression, experimental design</dd></div>
+          <div><dt>Data engineering and cloud</dt><dd>Azure (Data Factory, ADLS, Databricks, Synapse, AzureML, Purview), GCP, Docker, Git, SQL/NoSQL, ETL/ELT, dimensional modeling, REST APIs</dd></div>
+          <div><dt>Analytics and reporting</dt><dd>Power BI, Looker Studio, Tableau, Matplotlib, Seaborn; EBITDA, SG&amp;A, and ROIC reporting</dd></div>
+          <div><dt>AI-assisted development</dt><dd>Claude, Copilot</dd></div>
+        </dl>
+      </div>
+    </section>
 
-{% include certifications.html %}
+    <section class="block" aria-labelledby="edu">
+      <h2 id="edu">Education</h2>
+      <div class="content">
+        <ul class="edu">
+          <li><h3>M.S. in Data Science</h3><p>Boston University, College of Computing and Data Science, 2024–2025. GPA 3.85, Dean's Circle.</p></li>
+          <li><h3>B.S. in Neuroscience</h3><p>Boston University, College of Arts and Sciences, 2021–2024. GPA 3.57, Dean's Circle.</p></li>
+        </ul>
+      </div>
+    </section>
 
-{% include projects.html %}
+    <section class="block contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <div class="content">
+        <p class="big"><a href="mailto:rajdeepsingh9613@gmail.com">rajdeepsingh9613@gmail.com</a></p>
+        <p><a href="tel:+14752929261">(475) 292-9261</a></p>
+        <p>Based in Connecticut, working remotely.</p>
+      </div>
+    </section>
+  </main>
 
-{% include oss-contributions.html %}
+  <footer>
+    <p lang="pa">ਸ਼ਹੀਦ ਸਿੰਘ ਸਹਾਏ</p>
+  </footer>
 
-{% include publications.html %}
-
-{% include recommendations.html %}
-
-{% include skills.html %}
+  <script src="assets/js/fan.js" defer></script>
+</body>
+</html>
