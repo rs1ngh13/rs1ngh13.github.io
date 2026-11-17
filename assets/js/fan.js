@@ -6,10 +6,10 @@
 
   var N = 400, STEPS = 120, drift = 0.006, vol = 0.045;
   var css = getComputedStyle(document.documentElement);
-  var INK = css.getPropertyValue("--ink").trim() || "#16243a";
-  var GREEN = css.getPropertyValue("--green").trim() || "#1e6b57";
-  var SLATE = css.getPropertyValue("--slate").trim() || "#56627a";
-  var RULE = css.getPropertyValue("--rule").trim() || "#cdd4dd";
+  var INK = css.getPropertyValue("--ink").trim() || "#0e2a47";
+  var ACCENT = css.getPropertyValue("--accent").trim() || "#2563c9";
+  var SLATE = css.getPropertyValue("--slate").trim() || "#51627a";
+  var RULE = css.getPropertyValue("--rule").trim() || "#d8e0ec";
 
   function gauss() {
     var u = 1 - Math.random(), v = Math.random();
@@ -71,11 +71,11 @@
     ctx.beginPath(); ctx.moveTo(X(0), Y(p90[0]));
     for (var t = 1; t <= upto; t++) ctx.lineTo(X(t), Y(p90[t]));
     for (t = upto; t >= 0; t--) ctx.lineTo(X(t), Y(p10[t]));
-    ctx.closePath(); ctx.fillStyle = GREEN; ctx.globalAlpha = 0.16; ctx.fill(); ctx.globalAlpha = 1;
+    ctx.closePath(); ctx.fillStyle = ACCENT; ctx.globalAlpha = 0.16; ctx.fill(); ctx.globalAlpha = 1;
 
     // median
-    ctx.strokeStyle = GREEN; ctx.lineWidth = 2.5; line(p50, upto); ctx.stroke();
-    ctx.fillStyle = GREEN; ctx.beginPath(); ctx.arc(X(upto), Y(p50[upto]), 4, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = ACCENT; ctx.lineWidth = 2.5; line(p50, upto); ctx.stroke();
+    ctx.fillStyle = ACCENT; ctx.beginPath(); ctx.arc(X(upto), Y(p50[upto]), 4, 0, Math.PI * 2); ctx.fill();
   }
 
   size();
