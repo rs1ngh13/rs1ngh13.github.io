@@ -201,6 +201,7 @@ footer {
 }
 footer p { margin: 0; padding: 2rem 0 3rem; border-top: 1px solid var(--rule); }
 .emblem { display: flex; align-items: center; gap: 0.75rem; }
+.emblem span { font-family: "Noto Sans Gurmukhi", "Gurmukhi MN", sans-serif; font-size: 1rem; font-weight: 500; line-height: 1; display: block; }
 .emblem img { width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 0 0 1px var(--rule); }
 
 @media (max-width: 860px) {
