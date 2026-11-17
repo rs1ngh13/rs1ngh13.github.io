@@ -110,7 +110,6 @@ h1 {
 }
 .hero-chart canvas { cursor: crosshair; touch-action: pan-y; }
 .readout { margin: 0.6rem 0 0; min-height: 1.6em; font-size: var(--step--1); color: var(--ink); }
-.viridis-key { display: inline-block; width: 64px; height: 8px; margin-right: 0.5rem; border-radius: 4px; vertical-align: 1px; background: linear-gradient(90deg, #440154, #3b528b, #21918c, #5ec962, #fde725); }
 .hero-chart figcaption {
   margin-top: 0.7rem;
   font-size: var(--step--1);
