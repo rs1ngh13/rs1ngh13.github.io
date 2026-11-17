@@ -34,7 +34,17 @@
     </div>
     <figure class="hero-chart">
       <canvas id="fan" aria-hidden="true"></canvas>
-      <figcaption>A Monte Carlo fan: 400 simulated paths with the median and 10th–90th percentile band, drawn fresh on each visit.</figcaption>
+      <p class="readout" id="fan-readout" aria-live="polite">Hover the chart to read any year.</p>
+      <div class="sim-controls">
+        <label>Annual growth <output id="mu-out">7%</output>
+          <input type="range" id="mu" min="-5" max="20" step="1" value="7"></label>
+        <label>Annual volatility <output id="sigma-out">15%</output>
+          <input type="range" id="sigma" min="5" max="50" step="1" value="15"></label>
+        <label>Paths <output id="n-out">400</output>
+          <input type="range" id="paths" min="100" max="1000" step="50" value="400"></label>
+        <button type="button" class="btn" id="rerun">Run again</button>
+      </div>
+      <figcaption>A 10-year Monte Carlo simulation of a value starting at 100, with the median path and the 10th–90th percentile band. Change the inputs to reshape it.</figcaption>
     </figure>
   </header>
 
