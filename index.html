@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@500&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -35,16 +35,7 @@
     <figure class="hero-chart">
       <canvas id="fan" aria-hidden="true"></canvas>
       <p class="readout" id="fan-readout" aria-live="polite">Hover the chart to read any year.</p>
-      <div class="sim-controls">
-        <label>Annual growth <output id="mu-out">7%</output>
-          <input type="range" id="mu" min="-5" max="20" step="1" value="7"></label>
-        <label>Annual volatility <output id="sigma-out">15%</output>
-          <input type="range" id="sigma" min="5" max="50" step="1" value="15"></label>
-        <label>Paths <output id="n-out">400</output>
-          <input type="range" id="paths" min="100" max="1000" step="50" value="400"></label>
-        <button type="button" class="btn" id="rerun">Run again</button>
-      </div>
-      <figcaption>A 10-year Monte Carlo simulation of a value starting at 100, with the median path and the 10th–90th percentile band. Change the inputs to reshape it.</figcaption>
+      <figcaption><span class="viridis-key" aria-hidden="true"></span>A 10-year Monte Carlo simulation of a value starting at 100. Each path is colored by where it ends, from lowest (purple) to highest (yellow); the dark line is the median and the dashed lines are the 10th and 90th percentiles. Hover to read any year.</figcaption>
     </figure>
   </header>
 
@@ -154,6 +145,6 @@
     <p class="emblem"><img src="assets/images/footer-emblem.webp" width="44" height="44" alt="Painting of Baba Deep Singh Ji Shaheed"><span lang="pa">ਸ਼ਹੀਦ ਸਿੰਘ ਸਹਾਏ</span></p>
   </footer>
 
-  <script src="assets/js/fan.js" defer></script>
+  <script src="assets/js/fan.js?v=4" defer></script>
 </body>
 </html>
